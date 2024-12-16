@@ -4,7 +4,8 @@
 
 This project aims to predict the outcome of visa applications using machine learning. The system takes a number of inputs from the user about their profile and makes a prediction, whether that person would get approval or rejection on their US visa application.
 
-https://github.com/user-attachments/assets/0602384c-e7c9-4d60-beec-4590da9e61f5
+https://github.com/user-attachments/assets/bc19911f-7e95-40e6-b839-c30c4cc9e9c3
+
 
 ## Methods Used:
 

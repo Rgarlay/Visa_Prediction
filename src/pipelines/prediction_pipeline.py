@@ -2,8 +2,7 @@ import sys
 import pandas as pd
 from ..exception import CustomException
 from ..utils import load_object
-import sklearn
-import dill
+
 
 
 class PredictPipeline:

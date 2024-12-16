@@ -5,110 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Performance Prediction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Ensuring the form doesn't require scrolling */
+        .container {
+            max-width: 1200px;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-group {
+            flex: 1 0 48%; /* Make the inputs take up 48% of the width */
+        }
+        .form-control {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="login">
-            <h1 class="text-center mb-4">Employee Performance Prediction</h1>
+            <h1 class="text-center mb-4">USA Employee Visa Prediction</h1>
             <form action="{{ url_for('predict_datapoint') }}" method="post">
                 
-                <!-- Continent -->
-                <div class="mb-3">
-                    <label class="form-label">Continent</label>
-                    <select class="form-control" name="continent" required>
-                        <option selected disabled value="">Select Continent</option>
-                        <option value="Asia">Asia</option>
-                        <option value="Africa">Africa</option>
-                        <option value="North America">North America</option>
-                        <option value="Europe">Europe</option>
-                        <option value="South America">South America</option>
-                        <option value="Oceania">Oceania</option>
-                    </select>
+                <div class="form-row">
+                    <!-- Continent -->
+                    <div class="form-group">
+                        <label class="form-label">Continent</label>
+                        <select class="form-control" name="continent" required>
+                            <option selected disabled value="">Select Continent</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="North America">North America</option>
+                            <option value="Europe">Europe</option>
+                            <option value="South America">South America</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                    </div>
+
+                    <!-- Education of Employee -->
+                    <div class="form-group">
+                        <label class="form-label">Education of Employee</label>
+                        <select class="form-control" name="education_of_employee" required>
+                            <option selected disabled value="">Select Education Level</option>
+                            <option value="High School">High School</option>
+                            <option value="Master's">Master's</option>
+                            <option value="Bachelor's">Bachelor's</option>
+                            <option value="Doctorate">Doctorate</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- Education of Employee -->
-                <div class="mb-3">
-                    <label class="form-label">Education of Employee</label>
-                    <select class="form-control" name="education_of_employee" required>
-                        <option selected disabled value="">Select Education Level</option>
-                        <option value="High School">High School</option>
-                        <option value="Master's">Master's</option>
-                        <option value="Bachelor's">Bachelor's</option>
-                        <option value="Doctorate">Doctorate</option>
-                    </select>
+                <div class="form-row">
+                    <!-- Has Job Experience -->
+                    <div class="form-group">
+                        <label class="form-label">Has Job Experience?</label>
+                        <select class="form-control" name="has_job_experience" required>
+                            <option selected disabled value="">Select Option</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Requires Job Training -->
+                    <div class="form-group">
+                        <label class="form-label">Requires Job Training?</label>
+                        <select class="form-control" name="requires_job_training" required>
+                            <option selected disabled value="">Select Option</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- Has Job Experience -->
-                <div class="mb-3">
-                    <label class="form-label">Has Job Experience?</label>
-                    <select class="form-control" name="has_job_experience" required>
-                        <option selected disabled value="">Select Option</option>
-                        <option value="Y">Yes</option>
-                        <option value="N">No</option>
-                    </select>
+                <div class="form-row">
+                    <!-- Number of Employees -->
+                    <div class="form-group">
+                        <label class="form-label">Number of Employees</label>
+                        <input class="form-control" type="number" name="no_of_employees" placeholder="Enter number of employees" min="0" required>
+                    </div>
+
+                    <!-- Year Established -->
+                    <div class="form-group">
+                        <label class="form-label">Year Established</label>
+                        <input class="form-control" type="number" name="yr_of_estab" placeholder="Enter year established" min="1900" max="2024" required>
+                    </div>
                 </div>
 
-                <!-- Requires Job Training -->
-                <div class="mb-3">
-                    <label class="form-label">Requires Job Training?</label>
-                    <select class="form-control" name="requires_job_training" required>
-                        <option selected disabled value="">Select Option</option>
-                        <option value="Y">Yes</option>
-                        <option value="N">No</option>
-                    </select>
+                <div class="form-row">
+                    <!-- Region of Employment -->
+                    <div class="form-group">
+                        <label class="form-label">Region of Employment</label>
+                        <select class="form-control" name="region_of_employment" required>
+                            <option selected disabled value="">Select Region</option>
+                            <option value="West">West</option>
+                            <option value="Northeast">Northeast</option>
+                            <option value="South">South</option>
+                            <option value="Midwest">Midwest</option>
+                            <option value="Island">Island</option>
+                        </select>
+                    </div>
+
+                    <!-- Prevailing Wage -->
+                    <div class="form-group">
+                        <label class="form-label">Prevailing Wage</label>
+                        <input class="form-control" type="number" name="prevailing_wage" placeholder="Enter prevailing wage" min="0" required>
+                    </div>
                 </div>
 
-                <!-- Number of Employees -->
-                <div class="mb-3">
-                    <label class="form-label">Number of Employees</label>
-                    <input class="form-control" type="number" name="no_of_employees" placeholder="Enter number of employees" min="0" required>
-                </div>
+                <div class="form-row">
+                    <!-- Unit of Wage -->
+                    <div class="form-group">
+                        <label class="form-label">Unit of Wage</label>
+                        <select class="form-control" name="unit_of_wage" required>
+                            <option selected disabled value="">Select Unit of Wage</option>
+                            <option value="Hour">Hour</option>
+                            <option value="Year">Year</option>
+                            <option value="Week">Week</option>
+                            <option value="Month">Month</option>
+                        </select>
+                    </div>
 
-                <!-- Year Established -->
-                <div class="mb-3">
-                    <label class="form-label">Year Established</label>
-                    <input class="form-control" type="number" name="yr_of_estab" placeholder="Enter year established" min="1900" max="2024" required>
-                </div>
-
-                <!-- Region of Employment -->
-                <div class="mb-3">
-                    <label class="form-label">Region of Employment</label>
-                    <select class="form-control" name="region_of_employment" required>
-                        <option selected disabled value="">Select Region</option>
-                        <option value="West">West</option>
-                        <option value="Northeast">Northeast</option>
-                        <option value="South">South</option>
-                        <option value="Midwest">Midwest</option>
-                        <option value="Island">Island</option>
-                    </select>
-                </div>
-
-                <!-- Prevailing Wage -->
-                <div class="mb-3">
-                    <label class="form-label">Prevailing Wage</label>
-                    <input class="form-control" type="number" name="prevailing_wage" placeholder="Enter prevailing wage" min="0" required>
-                </div>
-
-                <!-- Unit of Wage -->
-                <div class="mb-3">
-                    <label class="form-label">Unit of Wage</label>
-                    <select class="form-control" name="unit_of_wage" required>
-                        <option selected disabled value="">Select Unit of Wage</option>
-                        <option value="Hour">Hour</option>
-                        <option value="Year">Year</option>
-                        <option value="Week">Week</option>
-                        <option value="Month">Month</option>
-                    </select>
-                </div>
-
-                <!-- Full-time Position -->
-                <div class="mb-3">
-                    <label class="form-label">Full-time Position?</label>
-                    <select class="form-control" name="full_time_position" required>
-                        <option selected disabled value="">Select Option</option>
-                        <option value="Y">Yes</option>
-                        <option value="N">No</option>
-                    </select>
+                    <!-- Full-time Position -->
+                    <div class="form-group">
+                        <label class="form-label">Full-time Position?</label>
+                        <select class="form-control" name="full_time_position" required>
+                            <option selected disabled value="">Select Option</option>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- Submit Button -->
@@ -119,7 +146,7 @@
 
             <!-- Prediction Results -->
             <h2 class="text-center mt-4">
-                THE prediction is {{ results }}
+                Visa Will be {{ results }}
             </h2>
         </div>
     </div>

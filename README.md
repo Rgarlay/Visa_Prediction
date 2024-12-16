@@ -39,7 +39,8 @@ git clone https://github.com/Rgarlay/Visa_Prediction.git
 conda activate venv/
 pip install -r path_to_txt_file/req.txt 
 ```
-3. Run the code to train the model
+3. Run the code to train the model.
+   
 NOTE: Change all pre defined local paths to the paths in your local environment.
 
 ```

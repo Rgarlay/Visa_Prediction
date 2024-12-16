@@ -37,22 +37,21 @@ git clone https://github.com/Rgarlay/Visa_Prediction.git
 2. Activate the virtual environment and install all dependencies
 ```
 conda activate venv/
-```
 pip install -r path_to_txt_file/req.txt 
 ```
 3. Run the code to train the model
 NOTE: Change all pre defined local paths to the paths in your local environment.
+
 ```
 py -m src.components.data_ingestion.py
 ```
 4. Run the app.py to run the model locally
-
 ```
 py app.py
 ```
 
 
-### Contact:
+## Contact:
 For Any Further Query, you can contact me at : ravigarlay@gmail.com
 
 

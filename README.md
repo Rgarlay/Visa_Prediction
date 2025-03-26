@@ -27,7 +27,7 @@ Kaggle.com provides a dataset of 1500 instances, with a number of numerical and 
 
 ![image](https://github.com/user-attachments/assets/53b2f971-e488-4a83-81e6-a0fb8fde57bd)
 
-To download Power BI dashbaord: ![image](https://github.com/user-attachments/assets/6f9b6218-abe5-4ade-b14a-c12f1ac872c2)
+To download Power BI dashbaord: (https://drive.google.com/drive/folders/1ul3jL4wDg5Dk48i5JXLfxRg9ePhMBIfT?usp=drive_link)
 
 
 ## Getting Started 

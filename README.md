@@ -16,8 +16,8 @@ https://github.com/user-attachments/assets/bc19911f-7e95-40e6-b839-c30c4cc9e9c3
 
 
 ## Technologies Used: 
-- VS code, Windows
-- Python, Anaconda, Git, Jupyter   
+- VS code, Windows, Power BI
+- Python, Anaconda, Git, Jupyter
 - Sklearn, Pandas, Matplotlib, Seaborn, Flask
 
 ### Project Description:

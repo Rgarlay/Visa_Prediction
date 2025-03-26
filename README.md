@@ -25,7 +25,8 @@ Kaggle.com provides a dataset of 1500 instances, with a number of numerical and 
 
 ![visa_pred_datasset](https://github.com/user-attachments/assets/36f79f48-0fd4-488b-9400-81b556c9e698)
 
-![visa_approval_dist](https://github.com/user-attachments/assets/2b4d8782-eadb-4505-9bb7-2bc29e65e077)
+[Visa.pdf](https://github.com/user-attachments/files/19460600/Visa.pdf)
+
 
 
 ## Getting Started 
